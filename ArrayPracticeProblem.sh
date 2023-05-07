@@ -34,24 +34,4 @@ find_second_smallest() {
     local min2=1000
 
     for number in "${arr[@]}"; do
-        if (( number < min1 )); then
-            min2=$min1
-            min1=$number
-        elif (( number < min2 && number > min1 )); then
-            min2=$number
-        fi
-    done
-
-    echo "$min2"
-}
-
-random_numbers=$(generate_random_numbers)
-numbers_array=($random_numbers)
-
-echo "Generated numbers: ${numbers_array[*]}"
-
-second_largest=$(find_second_largest "${numbers_array[@]}")
-second_smallest=$(find_second_smallest "${numbers_array[@]}")
-
-echo "Second largest number: $second_largest"
-echo "Second smallest number: $second_smallest"
+        if (( number < m
